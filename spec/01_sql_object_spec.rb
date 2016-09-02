@@ -1,8 +1,9 @@
 require '01_sql_object'
 require 'db_connection'
 require 'securerandom'
+require 'byebug'
 
-describe SQLObject do
+ describe SQLObject do
   before(:each) { DBConnection.reset }
   after(:each) { DBConnection.reset }
 
@@ -150,7 +151,6 @@ describe SQLObject do
           { name: 'cat1', owner_id: 1 },
           { name: 'cat2', owner_id: 2 }
         ]
-
         cats = Cat.parse_all(hashes)
         expect(cats.length).to eq(2)
         hashes.each_index do |i|
@@ -168,7 +168,6 @@ describe SQLObject do
     describe '::find' do
       it 'fetches single objects by id' do
         c = Cat.find(1)
-
         expect(c).to be_instance_of(Cat)
         expect(c.id).to eq(1)
       end
@@ -181,14 +180,12 @@ describe SQLObject do
     describe '#attribute_values' do
       it 'returns array of values' do
         cat = Cat.new(id: 123, name: 'cat1', owner_id: 1)
-
         expect(cat.attribute_values).to eq([123, 'cat1', 1])
       end
     end
 
     describe '#insert' do
       let(:cat) { Cat.new(name: 'Gizmo', owner_id: 1) }
-
       before(:each) { cat.insert }
 
       it 'inserts a new record' do
@@ -211,7 +208,6 @@ describe SQLObject do
     describe '#update' do
       it 'saves updated attributes to the DB' do
         human = Human.find(2)
-
         human.fname = 'Matthew'
         human.lname = 'von Rubens'
         human.update

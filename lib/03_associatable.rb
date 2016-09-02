@@ -20,7 +20,17 @@ end
 
 class BelongsToOptions < AssocOptions
   def initialize(name, options = {})
-    # ...
+
+    default = {primary_key: :id,
+               class_name: name.capitalize,
+               foreign_key: (name + "_id").to_sym}
+
+    options = default.merge(options)
+
+    options.each do |k,v|
+      self.k = v
+    end
+    
   end
 end
 
@@ -46,5 +56,6 @@ module Associatable
 end
 
 class SQLObject
+  extend Associatable
   # Mixin Associatable here...
 end

@@ -1,4 +1,5 @@
 require_relative 'db_connection'
+require_relative 'assoc_options'
 
 module Associatable
 

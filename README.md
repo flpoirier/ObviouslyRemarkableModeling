@@ -1,9 +1,3 @@
 Obviously Remarkable Modeling is a Ruby ORM built to make SQL queries easier and more intuitive.
 
-How to use:
-
-- Open PRY in the console
-- load "sql_object.rb"
-- Use commands including: new, find, save, where, all, etc.
-
-(Note April 2017: this is in the process of being revamped!)
+(Note May 2017: this is in the process of being revamped!)

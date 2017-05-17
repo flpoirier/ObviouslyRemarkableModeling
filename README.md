@@ -20,7 +20,7 @@ Most ActiveRecord commands will work, including .all, .where, .find, .new, and .
 
 <hr>
 
-<strong>Example (using the given database and models):</strong>
+<strong>Example</strong> (using the given database and models):
 
 auth = Author.new(fname: "Madeline", lname: "L'Engle")<br>
 auth.save<br>

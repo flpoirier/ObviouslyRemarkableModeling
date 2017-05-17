@@ -17,13 +17,13 @@ Example (using the given database and models):
 
 <hr>
 
-auth = Author.new(fname: "Madeline", lname: "L'Engle")
-auth.save
+auth = Author.new(fname: "Madeline", lname: "L'Engle")<br>
+auth.save<br>
 author_id = Author.all.last.id
 
 genre_id = Genre.where(genre: "science fiction").first.id
 
-book = Book.new(title: "A Wrinkle In Time", author_id: author_id, genre_id: genre_id)
+book = Book.new(title: "A Wrinkle In Time", author_id: author_id, genre_id: genre_id)<br>
 book.save
 
 <hr>

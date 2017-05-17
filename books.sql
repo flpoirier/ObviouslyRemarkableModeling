@@ -23,24 +23,24 @@ CREATE TABLE genres (
 
 
 INSERT INTO
-  genres (id, genre)
+  genres (genre)
 VALUES
-  (1, "fantasy"), (2, "science fiction"), (3, "biography");
+  ("fantasy"), ("science fiction"), ("biography");
 
 INSERT INTO
-  authors (id, fname, lname)
+  authors (fname, lname)
 VALUES
-  (1, "Isaac", "Asimov"),
-  (2, "Ursula", "Le Guin"),
-  (3, "J.K.", "Rowling"),
-  (4, "Ron", "Chernow");
+  ("Isaac", "Asimov"),
+  ("Ursula", "Le Guin"),
+  ("J.K.", "Rowling"),
+  ("Ron", "Chernow");
 
 INSERT INTO
-  books (id, title, author_id, genre_id)
+  books (title, author_id, genre_id)
 VALUES
-  (1, "Foundation", 1, 2),
-  (2, "The Dispossessed", 2, 2),
-  (3, "Harry Potter and the Chamber of Secrets", 3, 1),
-  (4, "Harry Potter and the Prisoner of Azkaban", 3, 1),
-  (5, "The Left Hand of Darkness", 2, 2),
-  (6, "Alexander Hamilton", 4, 3);
+  ("Foundation", 1, 2),
+  ("The Dispossessed", 2, 2),
+  ("Harry Potter and the Chamber of Secrets", 3, 1),
+  ("Harry Potter and the Prisoner of Azkaban", 3, 1),
+  ("The Left Hand of Darkness", 2, 2),
+  ("Alexander Hamilton", 4, 3);
